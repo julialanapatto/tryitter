@@ -26,4 +26,17 @@ public class StudentController : ControllerBase
     }
     return students;
   }
+
+  [HttpGet("{id:int}", Name="ObterEstudante")]
+  public ActionResult<Student> Get(int id)
+  {
+    var student = _context.Student.FirstOrDefault(s => s.StudentId == id);
+
+    if(student is null)
+    {
+      return NotFound("Estudante não encontrado");
+    }
+
+    return student;
+  }
 }
