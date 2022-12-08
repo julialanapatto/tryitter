@@ -64,7 +64,23 @@ public class StudentController : ControllerBase
 
     _context.Entry(student).State = EntityState.Modified;
     _context.SaveChanges();
-    
+
+    return Ok(student);
+  }
+
+  [HttpDelete("{id:int}")]
+  public ActionResult Delete(int id)
+  {
+    var student = _context.Student.FirstOrDefault(s => s.StudentId == id);
+
+    if (student is null)
+    {
+      return NotFound("Estudante não encontrado");
+    }
+
+    _context.Student.Remove(student);
+    _context.SaveChanges();
+
     return Ok(student);
   }
 }
