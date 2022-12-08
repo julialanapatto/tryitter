@@ -34,7 +34,9 @@ public class StudentController : ControllerBase
   [HttpGet]
   public ActionResult<IEnumerable<Student>> Get()
   {
-    var students = _context.Students.ToList();
+    //  Aula 48:
+    
+    var students = _context.Students.AsNoTracking().ToList();
 
     if(students is null)
     {
