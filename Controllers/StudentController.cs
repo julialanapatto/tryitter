@@ -15,6 +15,22 @@ public class StudentController : ControllerBase
     _context = context;
   }
 
+  //  Aula 46:
+
+  [HttpGet("posts")]
+  public ActionResult<IEnumerable<Student>> GetStudentsPosts()
+  {
+    var studentsPosts = _context.Student.Include(p => p.Post).ToList();
+
+    if(studentsPosts is null)
+    {
+      return NotFound("Estudantes não encontrados");
+    }
+
+    return studentsPosts;
+  }
+
+
   [HttpGet]
   public ActionResult<IEnumerable<Student>> Get()
   {
