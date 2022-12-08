@@ -41,7 +41,7 @@ public class StudentController : ControllerBase
   }
 
   [HttpPost]
-  public ActionResult Student(Student student)
+  public ActionResult Post(Student student)
   {
     if (student is null)
     {
