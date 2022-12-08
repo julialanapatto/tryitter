@@ -39,4 +39,18 @@ public class StudentController : ControllerBase
 
     return student;
   }
+
+  [HttpPost]
+  public ActionResult Student(Student student)
+  {
+    if (student is null)
+    {
+      return BadRequest("Estudante inválido");
+    }
+
+    _context.Student.Add(student);
+    _context.SaveChanges();
+
+    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, student);
+  }
 }
