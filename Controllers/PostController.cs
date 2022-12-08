@@ -73,4 +73,22 @@ public class PostController : ControllerBase
 
     return Ok(post);
   }
+
+  //  Aula 45:
+
+  [HttpDelete("{id:int}")]
+  public ActionResult Delete(int id)
+  {
+    var post = _context.Post.FirstOrDefault(p => p.PostId == id);
+
+    if (post is null)
+    {
+      return NotFound("Post não encontrado");
+    }
+
+    _context.Post.Remove(post);
+    _context.SaveChanges();
+
+    return Ok(post);
+  }
 }
