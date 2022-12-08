@@ -26,4 +26,19 @@ public class PostController : ControllerBase
     }
     return posts;
   }
+
+  // Aula 42:
+
+  [HttpGet("{id:int}")]
+  public ActionResult<Post> Get(int id)
+  {
+    var post = _context.Post.FrstOrDefault(p => p.PostId == id);
+
+    if(post is null)
+    {
+      return NotFound("Post não encontrado");
+    }
+
+    return post;
+  }
 }
