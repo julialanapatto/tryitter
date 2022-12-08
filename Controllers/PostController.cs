@@ -22,7 +22,7 @@ public class PostController : ControllerBase
 
     if(posts is null)
     {
-      return NotFound("Estudantes não encontrados");
+      return NotFound("Posts não encontrados");
     }
     return posts;
   }
