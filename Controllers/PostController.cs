@@ -32,7 +32,7 @@ public class PostController : ControllerBase
   [HttpGet("{id:int}", Name="ObterPost")]
   public ActionResult<Post> Get(int id)
   {
-    var post = _context.Post.FrstOrDefault(p => p.PostId == id);
+    var post = _context.Post.FirstOrDefault(p => p.PostId == id);
 
     if(post is null)
     {
