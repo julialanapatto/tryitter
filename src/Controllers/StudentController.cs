@@ -30,19 +30,28 @@ public class StudentController : ControllerBase
     return studentsPosts;
   }
 
-
   [HttpGet]
   public ActionResult<IEnumerable<Student>> Get()
   {
-    //  Aula 48:
-    
-    var students = _context.Students.AsNoTracking().ToList();
+    //  Aula 49:
 
-    if(students is null)
+    try
     {
-      return NotFound("Estudantes não encontrados");
+      //  Aula 48:
+
+      var students = _context.Students.AsNoTracking().ToList();
+
+      if(students is null)
+      {
+        return NotFound("Estudantes não encontrados");
+      }
+
+      return students;
     }
-    return students;
+    catch (Exception)
+    {
+      return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema ao tratar a sua solisitação.");
+    }
   }
 
   [HttpGet("{id:int}", Name="ObterEstudante")]
@@ -52,7 +61,7 @@ public class StudentController : ControllerBase
 
     if(student is null)
     {
-      return NotFound("Estudante não encontrado");
+      return NotFound($"Estudante com o id = {id} não encontrado");
     }
 
     return student;
