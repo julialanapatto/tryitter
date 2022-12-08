@@ -29,7 +29,7 @@ public class PostController : ControllerBase
 
   // Aula 42:
 
-  [HttpGet("{id:int}")]
+  [HttpGet("{id:int}", Name="ObterPost")]
   public ActionResult<Post> Get(int id)
   {
     var post = _context.Post.FrstOrDefault(p => p.PostId == id);
@@ -40,5 +40,21 @@ public class PostController : ControllerBase
     }
 
     return post;
+  }
+
+  //  Aula 43:
+
+  [HttpPost]
+  public ActionResult Post(Post post)
+  {
+    if (produto is null)
+    {
+      return BadRequest("Post inválido");
+    }
+
+    _context.Post.Add(post);
+    _context.SaveChanges();
+
+    return new CreatedAtRouteResult("ObterPost", new { id = post.PostId }, post);
   }
 }
