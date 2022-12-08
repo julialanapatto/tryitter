@@ -57,4 +57,20 @@ public class PostController : ControllerBase
 
     return new CreatedAtRouteResult("ObterPost", new { id = post.PostId }, post);
   }
+
+  //  Aula 44:
+
+  [HttpPut("{id:int}")]
+  public ActionResult Put(int id, Post post)
+  {
+    if (id != post.PostId)
+    {
+      return BadRequest("Id inválido");
+    }
+
+    _context.Entry(post).State = EntityState.Modified;
+    _context.SaveChanges();
+
+    return Ok(post);
+  }
 }
