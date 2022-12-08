@@ -53,4 +53,18 @@ public class StudentController : ControllerBase
 
     return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, student);
   }
+
+  [HttpPut("{id:int}")]
+  public ActionResult Put(int id, Student student)
+  {
+    if (id != student.StudentId)
+    {
+      return BadRequest("Id inválido");
+    }
+
+    _context.Entry(student).State = EntityState.Modified;
+    _context.SaveChanges();
+    
+    return Ok(student);
+  }
 }
