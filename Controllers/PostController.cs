@@ -7,23 +7,23 @@ namespace Tryitter.Controllers;
 
 [Route("[controller]")]
 [ApiController]
-public class StudentController : ControllerBase
+public class PostController : ControllerBase
 {
   private readonly AppDbContext _context;
-  public StudentController(AppDbContext context)
+  public PostController(AppDbContext context)
   {
     _context = context;
   }
 
   [HttpGet]
-  public ActionResult<IEnumerable<Student>> Get()
+  public ActionResult<IEnumerable<Post>> Get()
   {
-    var students = _context.Students.ToList();
+    var posts = _context.Post.ToList();
 
-    if(students is null)
+    if(posts is null)
     {
       return NotFound("Estudantes não encontrados");
     }
-    return students;
+    return posts;
   }
 }
