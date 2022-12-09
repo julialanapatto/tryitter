@@ -20,7 +20,7 @@ public class StudentController : ControllerBase
   [HttpGet("posts")]
   public ActionResult<IEnumerable<Student>> GetStudentsPosts()
   {
-    var studentsPosts = _context.Student.Include(p => p.Post).ToList();
+    var studentsPosts = _context.Students.Include(p => p.Post).ToList();
 
     if(studentsPosts is null)
     {
@@ -57,7 +57,7 @@ public class StudentController : ControllerBase
   [HttpGet("{id:int}", Name="ObterEstudante")]
   public ActionResult<Student> Get(int id)
   {
-    var student = _context.Student.FirstOrDefault(s => s.StudentId == id);
+    var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
 
     if(student is null)
     {
@@ -75,7 +75,7 @@ public class StudentController : ControllerBase
       return BadRequest("Estudante inválido");
     }
 
-    _context.Student.Add(student);
+    _context.Students.Add(student);
     _context.SaveChanges();
 
     return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, student);
@@ -98,14 +98,14 @@ public class StudentController : ControllerBase
   [HttpDelete("{id:int}")]
   public ActionResult Delete(int id)
   {
-    var student = _context.Student.FirstOrDefault(s => s.StudentId == id);
+    var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
 
     if (student is null)
     {
       return NotFound("Estudante não encontrado");
     }
 
-    _context.Student.Remove(student);
+    _context.Students.Remove(student);
     _context.SaveChanges();
 
     return Ok(student);

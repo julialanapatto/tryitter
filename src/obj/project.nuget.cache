@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e3kz4uly7J7lUdEotqfYjFPC4SIkNsNTazFIafY0UDrn7Ez7pfTzcz4psUkACY/cjVtLckVsKG+tRXlqJiBKEA==",
+  "dgSpecHash": "0REEOasFU9lPEHZwHHK3ez60bYGJLv3NZbsTDqosNlbMHW28yDVA8JUw11+Vr6Ut5QrOpeHKsZnWZ9l84kAb/w==",
   "success": true,
-  "projectFilePath": "/home/asus/Documentos/tryitter/tryitter/tryitter.csproj",
+  "projectFilePath": "/home/asus/Documentos/tryitter/tryitter/src/tryitter.csproj",
   "expectedPackageFiles": [
     "/home/asus/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/asus/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

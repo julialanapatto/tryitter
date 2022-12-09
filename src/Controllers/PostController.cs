@@ -47,7 +47,7 @@ public class PostController : ControllerBase
   [HttpPost]
   public ActionResult Post(Post post)
   {
-    if (produto is null)
+    if (post is null)
     {
       return BadRequest("Post inválido");
     }
