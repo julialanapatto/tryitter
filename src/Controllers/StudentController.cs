@@ -19,7 +19,7 @@ public class StudentController : ControllerBase
   [HttpGet("posts")]
   public ActionResult<IEnumerable<Student>> GetStudentsPosts()
   {
-    var studentsPosts = _context.Students.Include(p => p.Post).ToList();
+    var studentsPosts = _context.Students.Include(p => p.Post).Where(s => s.StudentId <=5).ToList();
 
     if(studentsPosts is null)
     {
