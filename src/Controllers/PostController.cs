@@ -27,7 +27,6 @@ public class PostController : ControllerBase
     return posts;
   }
 
-  // Aula 42:
 
   [HttpGet("{id:int}", Name="ObterPost")]
   public ActionResult<Post> Get(int id)
@@ -42,7 +41,6 @@ public class PostController : ControllerBase
     return post;
   }
 
-  //  Aula 43:
 
   [HttpPost]
   public ActionResult Post(Post post)
