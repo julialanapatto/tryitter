@@ -18,18 +18,17 @@ Conforme visto na imagem acima, haverá um **Front-End** que será responsável 
 2. Implementar um C.R.U.D. para um post de uma pessoa estudante;
 3. Alterar um post depois de publicado.
 
-
 ## Desenvolvimento 🎯
 
 Nessa rede social, **as pessoas estudantes devem conseguir** `se cadastrar com nome, e-mail, módulo atual que estão estudando na Trybe, status personalizado e senha para se autenticar`. Deve ser possível também `alterar essa conta a qualquer momento, desde que a pessoa usuária esteja autenticada.`
 
 Uma pessoa estudante deve poder também `publicar posts em seu perfil, que poderão conter texto com até 300 caracteres e arquivos de imagem, além de conseguir pesquisar outras contas por nome e optar por listar todos seus posts ou apenas o último.`
 
-## Diferenciais
+## Diferenciais 💎
 
- 1. O serviço recebe muitas requisições e nenhuma fica esperando
- 2. Rotas devem ser autenticadas por motivos de segurança
- 3. As principais funcionalidades são testadas
+1. O serviço recebe muitas requisições e nenhuma fica esperando
+2. Rotas devem ser autenticadas por motivos de segurança
+3. As principais funcionalidades são testadas
 
 ## Requisitos técnicos ⚙
 
@@ -40,8 +39,6 @@ Uma pessoa estudante deve poder também `publicar posts em seu perfil, que poder
 ## Tecnologias utilizadas 🛠
 
 <img title="CSharp" alt="CSharp" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" /> <img title="Microsoft SQL Server" alt="Microsoft SQL Server" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" /> <img title="Azure" alt="Azure" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" /> 
-
-
 
 ## Instalando depedências 🔽
 
