@@ -15,6 +15,9 @@ namespace Tryitter.Models
 
     [Required(ErrorMessage = "O id do estudante é obrigatório")]
     public int StudentId { get; set; }
+
+    //  Aula 47:
+    [JsonIgnore]
     public Student? Student { get; set; }
   }
 }
