@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Tryitter.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Tryitter.Context
 {
-  public class AppDbContext : DbContext
+  //  Aula 155:
+  public class AppDbContext : IdentityDbContext
   {
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
