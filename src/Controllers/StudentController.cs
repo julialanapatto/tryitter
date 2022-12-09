@@ -16,19 +16,19 @@ public class StudentController : ControllerBase
   }
 
 
-  [HttpGet("posts")]
-  public ActionResult<IEnumerable<Student>> GetStudentsPosts()
-  {
-    var studentsPosts = _context.Students.Include(p => p.Post).Where(s => s.StudentId <=5).ToList();
-
-    if(studentsPosts is null)
+  /*   [HttpGet("posts")]
+    public ActionResult<IEnumerable<Student>> GetStudentsPosts()
     {
-      return NotFound("Estudantes não encontrados");
+      var studentsPosts = _context.Students.Take(10).ToList();
+
+      if(studentsPosts is null)
+      {
+        return NotFound("Estudantes não encontrados");
+      }
+
+      return studentsPosts;
     }
-
-    return studentsPosts;
-  }
-
+   */
   [HttpGet]
   public ActionResult<IEnumerable<Student>> Get()
   {
@@ -40,7 +40,7 @@ public class StudentController : ControllerBase
 
       var students = _context.Students.AsNoTracking().ToList();
 
-      if(students is null)
+      if (students is null)
       {
         return NotFound("Estudantes não encontrados");
       }
@@ -49,16 +49,16 @@ public class StudentController : ControllerBase
     }
     catch (Exception)
     {
-      return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema ao tratar a sua solisitação.");
+      return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema ao tratar a sua solicitação.");
     }
   }
 
-  [HttpGet("{id:int}", Name="ObterEstudante")]
+  [HttpGet("{id:int}", Name = "ObterEstudante")]
   public ActionResult<Student> Get(int id)
   {
     var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
 
-    if(student is null)
+    if (student is null)
     {
       return NotFound($"Estudante com o id = {id} não encontrado");
     }
@@ -77,7 +77,7 @@ public class StudentController : ControllerBase
     _context.Students.Add(student);
     _context.SaveChanges();
 
-    return new CreatedAtRouteResult("ObterEst udante", new { id = student.StudentId }, student);
+    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, student);
   }
 
   [HttpPut("{id:int}")]
