@@ -15,7 +15,6 @@ public class StudentController : ControllerBase
     _context = context;
   }
 
-  //  Aula 46:
 
   [HttpGet("posts")]
   public ActionResult<IEnumerable<Student>> GetStudentsPosts()
@@ -78,7 +77,7 @@ public class StudentController : ControllerBase
     _context.Students.Add(student);
     _context.SaveChanges();
 
-    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, student);
+    return new CreatedAtRouteResult("ObterEst udante", new { id = student.StudentId }, student);
   }
 
   [HttpPut("{id:int}")]

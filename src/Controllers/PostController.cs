@@ -56,7 +56,6 @@ public class PostController : ControllerBase
     return new CreatedAtRouteResult("ObterPost", new { id = post.PostId }, post);
   }
 
-  //  Aula 44:
 
   [HttpPut("{id:int}")]
   public ActionResult Put(int id, Post post)
@@ -72,7 +71,6 @@ public class PostController : ControllerBase
     return Ok(post);
   }
 
-  //  Aula 45:
 
   [HttpDelete("{id:int}")]
   public ActionResult Delete(int id)
