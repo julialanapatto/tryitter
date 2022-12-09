@@ -18,7 +18,7 @@ public class PostController : ControllerBase
   [HttpGet]
   public ActionResult<IEnumerable<Post>> Get()
   {
-    var posts = _context.Post.AsNoTracking().ToList();
+    var posts = _context.Post.AsNoTracking().Take(10).ToList();
 
     if(posts is null)
     {
