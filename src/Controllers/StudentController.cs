@@ -16,19 +16,6 @@ public class StudentController : ControllerBase
   }
 
 
-  /*   [HttpGet("posts")]
-    public ActionResult<IEnumerable<Student>> GetStudentsPosts()
-    {
-      var studentsPosts = _context.Students.Take(10).ToList();
-
-      if(studentsPosts is null)
-      {
-        return NotFound("Estudantes não encontrados");
-      }
-
-      return studentsPosts;
-    }
-   */
   [HttpGet]
   public ActionResult<IEnumerable<Student>> Get()
   {
