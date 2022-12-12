@@ -127,3 +127,7 @@
 /home/asus/Documentos/tryitter/tryitter/src/obj/Debug/net6.0/tryitter.genruntimeconfig.cache
 /home/asus/Documentos/tryitter/tryitter/src/obj/Debug/net6.0/ref/tryitter.dll
 /home/asus/Documentos/tryitter/tryitter/src/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/asus/Documentos/tryitter/tryitter/src/bin/Debug/net6.0/EntityFramework.SqlServer.dll
+/home/asus/Documentos/tryitter/tryitter/src/bin/Debug/net6.0/EntityFramework.dll
+/home/asus/Documentos/tryitter/tryitter/src/bin/Debug/net6.0/Microsoft.AspNet.Identity.Core.dll
+/home/asus/Documentos/tryitter/tryitter/src/bin/Debug/net6.0/Microsoft.AspNet.Identity.EntityFramework.dll
