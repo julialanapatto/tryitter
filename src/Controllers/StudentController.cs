@@ -53,6 +53,8 @@ public class StudentController : ControllerBase
     }
   }
 
+
+
   [HttpGet("{id:int}", Name = "ObterEstudante")]
   public ActionResult<Student> Get(int id)
   {

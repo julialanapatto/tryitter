@@ -20,7 +20,7 @@ public class PostController : ControllerBase
   {
     var posts = _context.Post.AsNoTracking().Take(10).ToList();
 
-    if(posts is null)
+    if (posts is null)
     {
       return NotFound("Posts não encontrados");
     }
@@ -28,12 +28,12 @@ public class PostController : ControllerBase
   }
 
 
-  [HttpGet("{id:int}", Name="ObterPost")]
+  [HttpGet("{id:int}", Name = "ObterPost")]
   public ActionResult<Post> Get(int id)
   {
     var post = _context.Post.FirstOrDefault(p => p.PostId == id);
 
-    if(post is null)
+    if (post is null)
     {
       return NotFound("Post não encontrado");
     }
@@ -41,6 +41,17 @@ public class PostController : ControllerBase
     return post;
   }
 
+  // Get post por id do estudante
+  [HttpGet("Student")]
+  public ActionResult<IEnumerable<Post>> GetPostsByStudentId(int id)
+  {
+    var posts = _context.Post.Where(x => x.StudentId == id).AsNoTracking().ToList();
+    if (posts is null)
+    {
+      return NotFound("Nenhum Post Encontrado");
+    }
+    return posts;
+  }
 
   [HttpPost]
   public ActionResult Post(Post post)
