@@ -72,11 +72,11 @@ public class StudentController : ControllerBase
 
     var token = new TokenGenerator().Generate(student);
 
-    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, new { student, token } );
+    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, new { student, token });
   }
 
   [HttpPut("{id:int}")]
-//  [Authorize(Policy = "student")]
+  //  [Authorize(Policy = "student")]
   public ActionResult Put(int id, Student student)
   {
     if (id != student.StudentId)
