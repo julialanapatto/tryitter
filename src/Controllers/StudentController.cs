@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tryitter.Context;
 using Tryitter.Models;
+using Tryitter.Services;
 
 namespace Tryitter.Controllers;
 
@@ -17,6 +19,7 @@ public class StudentController : ControllerBase
 
 
   [HttpGet]
+  [Authorize(Policy = "student")]
   public ActionResult<IEnumerable<Student>> Get()
   {
     //  Aula 49:
@@ -58,6 +61,7 @@ public class StudentController : ControllerBase
   [HttpPost]
   public ActionResult Post(Student student)
   {
+
     if (student is null)
     {
       return BadRequest("Estudante inválido");
@@ -66,10 +70,13 @@ public class StudentController : ControllerBase
     _context.Students.Add(student);
     _context.SaveChanges();
 
-    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, student);
+    var token = new TokenGenerator().Generate(student);
+
+    return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, new { student, token } );
   }
 
   [HttpPut("{id:int}")]
+  [Authorize(Policy = "student")]
   public ActionResult Put(int id, Student student)
   {
     if (id != student.StudentId)
@@ -84,6 +91,7 @@ public class StudentController : ControllerBase
   }
 
   [HttpDelete("{id:int}")]
+  [Authorize(Policy = "student")]
   public ActionResult Delete(int id)
   {
     var student = _context.Students.FirstOrDefault(s => s.StudentId == id);

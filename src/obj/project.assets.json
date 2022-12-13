@@ -122,7 +122,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.2": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
@@ -1455,10 +1455,10 @@
         "microsoft.aspnetcore.authentication.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.2": {
-      "sha512": "piqHQnFONTynowTNuMDqCyL2oWSVrnoDhwc7iywwl4VG0Y2WCbpyoYQyiXlHpyc9htWy2KcM2cAe2twC4gBt8w==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.6": {
+      "sha512": "lrfPEeisa0xCmZKKQIKxuks37aGE6jgGqDq1ikZDwNLWfIt2/ajOQpHMSE6a5uLjEVqkChKpXpvA7ZvfIKvdzA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.2",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1466,7 +1466,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.6.0.2.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.6.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -3154,7 +3154,7 @@
     "net6.0": [
       "Microsoft.AspNet.Identity.EntityFramework >= 2.2.0",
       "Microsoft.AspNetCore.Authentication >= 2.2.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.2",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.6",
       "Microsoft.EntityFrameworkCore >= 6.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.11",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.11",
@@ -3211,7 +3211,7 @@
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[6.0.2, )"
+            "version": "[6.0.6, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

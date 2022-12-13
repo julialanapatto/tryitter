@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.0",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.2",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.6",
           "Microsoft.EntityFrameworkCore": "6.0.11",
           "Microsoft.EntityFrameworkCore.Design": "6.0.11",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.11",
@@ -88,14 +88,14 @@
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0"
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.2": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.6": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "6.0.2.0",
-            "fileVersion": "6.0.222.6412"
+            "assemblyVersion": "6.0.6.0",
+            "fileVersion": "6.0.622.26805"
           }
         }
       },
@@ -741,12 +741,12 @@
       "path": "microsoft.aspnetcore.authentication.core/2.2.0",
       "hashPath": "microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.2": {
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-piqHQnFONTynowTNuMDqCyL2oWSVrnoDhwc7iywwl4VG0Y2WCbpyoYQyiXlHpyc9htWy2KcM2cAe2twC4gBt8w==",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.2",
-      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.2.nupkg.sha512"
+      "sha512": "sha512-lrfPEeisa0xCmZKKQIKxuks37aGE6jgGqDq1ikZDwNLWfIt2/ajOQpHMSE6a5uLjEVqkChKpXpvA7ZvfIKvdzA==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.6",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/2.2.0": {
       "type": "package",
