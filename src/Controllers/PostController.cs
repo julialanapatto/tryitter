@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tryitter.Context;
@@ -54,6 +55,7 @@ public class PostController : ControllerBase
   }
 
   [HttpPost]
+  [Authorize]
   public ActionResult Post(Post post)
   {
     if (post is null)
@@ -69,6 +71,7 @@ public class PostController : ControllerBase
 
 
   [HttpPut("{id:int}")]
+  [Authorize]
   public ActionResult Put(int id, Post post)
   {
     if (id != post.PostId)
@@ -84,6 +87,7 @@ public class PostController : ControllerBase
 
 
   [HttpDelete("{id:int}")]
+  [Authorize]
   public ActionResult Delete(int id)
   {
     var post = _context.Post.FirstOrDefault(p => p.PostId == id);
