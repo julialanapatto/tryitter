@@ -75,7 +75,7 @@ public class StudentController : ControllerBase
   }
 
   [HttpPut("{id:int}")]
-  [Authorize(Policy = "student")]
+ // [Authorize(Policy = "student")]
   public ActionResult Put(int id, Student student)
   {
     if (id != student.StudentId)
@@ -90,7 +90,7 @@ public class StudentController : ControllerBase
   }
 
   [HttpDelete("{id:int}")]
-  [Authorize(Policy = "student")]
+ // [Authorize(Policy = "student")]
   public ActionResult Delete(int id)
   {
     var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
