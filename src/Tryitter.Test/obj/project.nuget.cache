@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GBFEXOFKxe8vlqB2zxJkdMQ9Mf54w20lNGLeKcG/2NNCLmwW3hUqlFRSfEL/XvNkaRzkbkoRspwNU4rknN1C9g==",
+  "dgSpecHash": "8shoaRnMYN87CCAEAPfR+GsBe8fk+jFx8Ag3rZBzFIbu/VRT42JZMJjTQmWW16QueFjCQ8rXVOubOE5/nzHfeQ==",
   "success": true,
   "projectFilePath": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter.Test/Tryitter.Test.csproj",
   "expectedPackageFiles": [
     "/home/asus/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
+    "/home/asus/.nuget/packages/coverlet.msbuild/3.2.0/coverlet.msbuild.3.2.0.nupkg.sha512",
     "/home/asus/.nuget/packages/entityframework/6.1.0/entityframework.6.1.0.nupkg.sha512",
     "/home/asus/.nuget/packages/fluentassertions/6.5.1/fluentassertions.6.5.1.nupkg.sha512",
     "/home/asus/.nuget/packages/microsoft.aspnet.identity.core/2.2.0/microsoft.aspnet.identity.core.2.2.0.nupkg.sha512",
