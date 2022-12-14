@@ -49,10 +49,10 @@ public class StudentController : ControllerBase
   {
     var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
 
-    if (student is null)
-    {
-      return NotFound($"Estudante com o id = {id} não encontrado");
-    }
+    // if (student is null)
+    // {
+    //   return NotFound($"Estudante com o id = {id} não encontrado");
+    // }
 
     return student;
   }

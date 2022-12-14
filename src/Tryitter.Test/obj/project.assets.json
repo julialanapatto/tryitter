@@ -10045,19 +10045,19 @@
     ]
   },
   "packageFolders": {
-    "/home/asus/.nuget/packages/": {}
+    "/home/klecianny/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter.Test/Tryitter.Test.csproj",
+      "projectUniqueName": "/home/klecianny/Área de Trabalho/tryitter/src/Tryitter.Test/Tryitter.Test.csproj",
       "projectName": "Tryitter.Test",
-      "projectPath": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter.Test/Tryitter.Test.csproj",
-      "packagesPath": "/home/asus/.nuget/packages/",
-      "outputPath": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter.Test/obj/",
+      "projectPath": "/home/klecianny/Área de Trabalho/tryitter/src/Tryitter.Test/Tryitter.Test.csproj",
+      "packagesPath": "/home/klecianny/.nuget/packages/",
+      "outputPath": "/home/klecianny/Área de Trabalho/tryitter/src/Tryitter.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/asus/.nuget/NuGet/NuGet.Config"
+        "/home/klecianny/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -10069,8 +10069,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/asus/Documentos/tryitter/tryitter/src/Tryitter/tryitter.csproj": {
-              "projectPath": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter/tryitter.csproj"
+            "/home/klecianny/Área de Trabalho/tryitter/src/Tryitter/tryitter.csproj": {
+              "projectPath": "/home/klecianny/Área de Trabalho/tryitter/src/Tryitter/tryitter.csproj"
             }
           }
         }
@@ -10134,7 +10134,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
       }
     }
   },
