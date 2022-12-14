@@ -49,4 +49,6 @@ Uma pessoa estudante deve poder também `publicar posts em seu perfil, que poder
 
 ## Documentação da API 📒
 
+Para visualização do funcionamento da API, disponibilizamos os vídeos de funcionamento das rotas via Swagger, estão na seguinte pasta: /src/Tryyitter/docs
+
 ## Considerações durante o desenvolvimento 📝
