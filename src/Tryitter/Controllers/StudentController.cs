@@ -29,10 +29,10 @@ public class StudentController : ControllerBase
 
       var students = _context.Students.AsNoTracking().ToList();
 
-      // if (students is null)
-      // {
-      //   return NotFound("Estudantes não encontrados");
-      // }
+      if (students is null)
+      {
+        return NotFound("Estudantes não encontrados");
+      }
 
       return students;
     }
@@ -43,19 +43,19 @@ public class StudentController : ControllerBase
   }
 
 
-
   [HttpGet("{id:int}", Name = "ObterEstudante")]
   public ActionResult<Student> Get(int id)
   {
     var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
 
-    // if (student is null)
-    // {
-    //   return NotFound($"Estudante com o id = {id} não encontrado");
-    // }
+    if (student is null)
+    {
+      return NotFound($"Estudante com o id = {id} não encontrado");
+    }
 
     return student;
   }
+
 
   [HttpPost]
   public ActionResult Post(Student student)
@@ -74,8 +74,9 @@ public class StudentController : ControllerBase
     return new CreatedAtRouteResult("ObterEstudante", new { id = student.StudentId }, new { student, token });
   }
 
+
   [HttpPut("{id:int}")]
- // [Authorize(Policy = "student")]
+  // [Authorize(Policy = "student")]
   public ActionResult Put(int id, Student student)
   {
     if (id != student.StudentId)
@@ -87,10 +88,11 @@ public class StudentController : ControllerBase
     _context.SaveChanges();
 
     return Ok(student);
+
   }
 
   [HttpDelete("{id:int}")]
- // [Authorize(Policy = "student")]
+  // [Authorize(Policy = "student")]
   public ActionResult Delete(int id)
   {
     var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
