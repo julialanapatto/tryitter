@@ -27,9 +27,9 @@ Uma pessoa estudante deve poder também `publicar posts em seu perfil, que poder
 
 ## Diferenciais
 
- 1. O serviço recebe muitas requisições e nenhuma fica esperando
- 2. Rotas devem ser autenticadas por motivos de segurança
- 3. As principais funcionalidades são testadas
+1. O serviço recebe muitas requisições e nenhuma fica esperando
+2. Rotas devem ser autenticadas por motivos de segurança
+3. As principais funcionalidades são testadas
 
 ## Requisitos técnicos ⚙
 
@@ -40,8 +40,6 @@ Uma pessoa estudante deve poder também `publicar posts em seu perfil, que poder
 ## Tecnologias utilizadas 🛠
 
 <img title="CSharp" alt="CSharp" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" /> <img title="Microsoft SQL Server" alt="Microsoft SQL Server" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" /> <img title="Azure" alt="Azure" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" /> 
-
-
 
 ## Instalando depedências 🔽
 
