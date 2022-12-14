@@ -45,34 +45,16 @@ public class PostControllerTest : IClassFixture<WebApplicationFactory<Program>>
     content.Should().NotBeNullOrEmpty();
   }
 
-  //  [Theory]
-  // [InlineData(1)]
-  // public async Task PostShouldReturnOkWithId(int id)
-  // {
-  //   var client = _factory.CreateClient();
+   [Theory]
+  [InlineData(1)]
+  public async Task PostShouldReturnOkWithId(int id)
+  {
+    var client = _factory.CreateClient();
 
-  //   var response = await client.GetAsync($"/Post/{id}");
+    var response = await client.GetAsync($"/Post/{id}");
 
-  //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-  // }
-
-  // [Theory]
-  // [InlineData(1)]
-  // public async Task PostShouldReturnOkCreatePost(int id)
-  // {
-  //   var client = _factory.CreateClient();
-
-  //   var response = await client.GetAsync($"/Post/{id}");
-
-  //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-  //   response.Content.Headers.ContentType.ToString().Should().Be("application/json; charset=utf-8");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("PostId");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Titulo");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Conteudo");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Data");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Autor");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Comentarios");
-  // }
+    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+  }
 
 
   [Fact]
