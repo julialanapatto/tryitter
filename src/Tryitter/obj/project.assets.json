@@ -3170,11 +3170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/asus/Documentos/tryitter/tryitter/src/tryitter.csproj",
+      "projectUniqueName": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter/tryitter.csproj",
       "projectName": "tryitter",
-      "projectPath": "/home/asus/Documentos/tryitter/tryitter/src/tryitter.csproj",
+      "projectPath": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter/tryitter.csproj",
       "packagesPath": "/home/asus/.nuget/packages/",
-      "outputPath": "/home/asus/Documentos/tryitter/tryitter/src/obj/",
+      "outputPath": "/home/asus/Documentos/tryitter/tryitter/src/Tryitter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/asus/.nuget/NuGet/NuGet.Config"

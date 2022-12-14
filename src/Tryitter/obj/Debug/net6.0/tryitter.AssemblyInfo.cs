@@ -17,6 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("tryitter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tryitter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Tryitter.Test")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

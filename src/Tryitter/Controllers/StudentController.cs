@@ -29,10 +29,10 @@ public class StudentController : ControllerBase
 
       var students = _context.Students.AsNoTracking().ToList();
 
-      if (students is null)
-      {
-        return NotFound("Estudantes não encontrados");
-      }
+      // if (students is null)
+      // {
+      //   return NotFound("Estudantes não encontrados");
+      // }
 
       return students;
     }
