@@ -55,7 +55,7 @@ public class PostController : ControllerBase
   }
 
   [HttpPost]
-  [Authorize(Policy = "student")]
+  // [Authorize(Policy = "student")]
   public ActionResult Post(Post post)
   {
     if (post is null)
@@ -71,7 +71,7 @@ public class PostController : ControllerBase
 
 
   [HttpPut("{id:int}")]
-  [Authorize(Policy = "student")]
+ // [Authorize(Policy = "student")]
   public ActionResult Put(int id, Post post)
   {
     if (id != post.PostId)
@@ -87,7 +87,7 @@ public class PostController : ControllerBase
 
 
   [HttpDelete("{id:int}")]
-  [Authorize(Policy = "student")]
+  // [Authorize(Policy = "student")]
   public ActionResult Delete(int id)
   {
     var post = _context.Post.FirstOrDefault(p => p.PostId == id);
