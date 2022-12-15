@@ -89,22 +89,30 @@ Para visualização do funcionamento da API, disponibilizamos os vídeos de func
 
 
 https://user-images.githubusercontent.com/90054523/207755996-2878a45e-e99b-4145-b807-ac5cf16db397.mp4
+Método POST Student e obtenção do token para autorização e seu retorno no GET Student.
+
 
 
 https://user-images.githubusercontent.com/90054523/207756003-c35de942-d9c2-4347-b920-6bbf370fffd8.mp4
+Método GET, PUT e DELETE Student por Id do estudante e seu retorno no GET Student.
+
 
 
 https://user-images.githubusercontent.com/90054523/207756013-25e27d17-e47d-421e-888b-c84a342dac4c.mp4
+Autorização e método POST Post e seu retorno no GET Post.
+
 
 
 https://user-images.githubusercontent.com/90054523/207756030-5a14f75a-76b8-4c99-90be-bdcf2bb5d254.mp4
+Método PUT Post.
 
 
 https://user-images.githubusercontent.com/90054523/207756045-3fbb1932-2db0-4a4b-abf1-08027802605f.mp4
+Método DELETE Post.
 
 
 https://user-images.githubusercontent.com/90054523/207756063-eba516d7-a725-49fe-a52f-6899d83a1a5e.mp4
-
+Método GET Post por Id do Estudante.
 
 
 
