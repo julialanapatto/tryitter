@@ -110,16 +110,16 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
   //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
   // }
 
-  // [Theory]
-  // [InlineData(1)]
-  // public async Task ShouldReturnOkDeleteStudent(int id)
-  // {
-  //   var client = _factory.CreateClient();
+  [Theory]
+  [InlineData(1)]
+  public async Task ShouldReturnOkDeleteStudent(int id)
+  {
+    var client = _factory.CreateClient();
 
-  //   var response = await client.DeleteAsync($"/Student/{id}");
+    var response = await client.DeleteAsync($"/Student/{id}");
 
-  //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-  // }
+    response.StatusCode.Should().Be(HttpStatusCode.OK);
+  }
 
   [Theory]
   [InlineData(0)]

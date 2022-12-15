@@ -48,15 +48,15 @@ public class PostControllerTest : IClassFixture<WebApplicationFactory<Program>>
     content.Should().NotBeNullOrEmpty();
   }
 
-  // [Theory]
-  // [InlineData(1)]
-  // public async Task GetPostByIdTest(int id)
-  // {
-  //   var client = _factory.CreateClient();
-  //   var response = await client.GetAsync($"/Post/{id}");
+  [Theory]
+  [InlineData(1)]
+  public async Task GetPostByIdTest(int id)
+  {
+    var client = _factory.CreateClient();
+    var response = await client.GetAsync($"/Post/{id}");
 
-  //   response.StatusCode.Should().Be(HttpStatusCode.OK);
-  // }
+    response.StatusCode.Should().Be(HttpStatusCode.OK);
+  }
 
   [Fact]
   public async Task PostReturnOkUpdatePost()
