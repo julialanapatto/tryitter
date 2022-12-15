@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Tryitter.Models;
 using Xunit;
-
-
+using System.Net.Http.Headers;
+using System.Net;
 
 namespace Tryitter.Test;
 
@@ -23,20 +23,26 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
   {
     var client = _factory.CreateClient();
 
+
     var response = await client.GetAsync("/Student");
 
     response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+    response.Content.ReadAsStringAsync().Result.Should().Contain("nome");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("email");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("modulo");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("status");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("senha");
   }
 
   [Theory]
-  [InlineData(1)]
+  [InlineData(2)]
   public async Task ShouldReturnOkWithId(int id)
   {
     var client = _factory.CreateClient();
 
     var response = await client.GetAsync($"/Student/{id}");
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+    response.StatusCode.Should().Be(HttpStatusCode.OK);
   }
 
 
@@ -57,6 +63,11 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
     var response = await client.PostAsJsonAsync("/Student", student);
 
     response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
+    response.Content.ReadAsStringAsync().Result.Should().Contain("nome");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("email");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("modulo");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("status");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("senha");
   }
 
   // [Fact]
@@ -99,16 +110,16 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
   //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
   // }
 
-  [Theory]
-  [InlineData(79)]
-  public async Task ShouldReturnOkDeleteStudent(int id)
-  {
-    var client = _factory.CreateClient();
+  // [Theory]
+  // [InlineData(1)]
+  // public async Task ShouldReturnOkDeleteStudent(int id)
+  // {
+  //   var client = _factory.CreateClient();
 
-    var response = await client.DeleteAsync($"/Student/{id}");
+  //   var response = await client.DeleteAsync($"/Student/{id}");
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-  }
+  //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+  // }
 
   [Theory]
   [InlineData(0)]
@@ -118,7 +129,7 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
 
     var response = await client.DeleteAsync($"/Student/{id}");
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+    response.StatusCode.Should().Be(HttpStatusCode.NotFound);
   }
 
 
@@ -130,8 +141,9 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
 
     var response = await client.DeleteAsync($"/Student/{id}");
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+    response.StatusCode.Should().Be(HttpStatusCode.NotFound);
   }
+
 
   [Fact]
   public async Task ShoulReturnOkCreateStudentWithId()
@@ -149,52 +161,34 @@ public class StudentControllerTest : IClassFixture<WebApplicationFactory<Program
 
     var response = await client.PostAsJsonAsync("/Student", student);
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
+    response.StatusCode.Should().Be(HttpStatusCode.Created);
   }
 
 
-  // [Fact]
-  // public async Task ShoulReturnOkUpdateStudentWithId()
-  // {
-  //   var client = _factory.CreateClient();
+  [Fact]
+  public async Task ShoulReturnOkUpdateStudentWithId()
+  {
+    var student = new Student
+    {
+      StudentId = 2,
+      Nome = "Teste",
+      Email = "email@email.com",
+      Modulo = "Final",
+      Status = "Ativo",
+      Senha = "secreta"
+    };
 
-  //   var student = new Student
-  //   {
-  //     Nome = "Teste",
-  //     Email = "email@email.com",
-  //     Modulo = "Final",
-  //     Status = "Ativo",
-  //     Senha = "secreta"
-  //   };
+    var client = _factory.CreateClient();
+    using HttpResponseMessage response = await client.PutAsJsonAsync("/student/2", student);
 
-  //   var response = await client.PutAsJsonAsync("/Student", student);
+    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+    response.Content.ReadAsStringAsync().Result.Should().Contain("nome");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("email");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("modulo");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("status");
+    response.Content.ReadAsStringAsync().Result.Should().Contain("senha");
+  }
 
-  //   response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Nome");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Email");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Modulo");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Status");
-  //   response.Content.ReadAsStringAsync().Result.Should().Contain("Senha");
-  // }
 
-  //   [Fact]
-  //   public async Task ShoulReturnBadRequestUpdateStudentWithId()
-  //   {
-  //     var client = _factory.CreateClient();
-
-  //     var student = new Student
-  //     {
-  //       Nome = "Teste",
-  //       Email = "email@email.com",
-  //       Modulo = "Final",
-  //       Status = "Ativo",
-  //       Senha = "secreta"
-  //     };
-
-  //     var response = await client.PutAsJsonAsync("/Student", student);
-
-  //     response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
-  //   }
-  
 }
 

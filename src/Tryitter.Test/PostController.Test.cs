@@ -1,5 +1,8 @@
+using System.Net;
+using System.Net.Http.Json;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Tryitter.Models;
 using Xunit;
 
 namespace Tryitter.Test;
@@ -45,17 +48,15 @@ public class PostControllerTest : IClassFixture<WebApplicationFactory<Program>>
     content.Should().NotBeNullOrEmpty();
   }
 
-   [Theory]
-  [InlineData(1)]
-  public async Task PostShouldReturnOkWithId(int id)
-  {
-    var client = _factory.CreateClient();
+  // [Theory]
+  // [InlineData(1)]
+  // public async Task GetPostByIdTest(int id)
+  // {
+  //   var client = _factory.CreateClient();
+  //   var response = await client.GetAsync($"/Post/{id}");
 
-    var response = await client.GetAsync($"/Post/{id}");
-
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-  }
-
+  //   response.StatusCode.Should().Be(HttpStatusCode.OK);
+  // }
 
   [Fact]
   public async Task PostReturnOkUpdatePost()
@@ -64,7 +65,7 @@ public class PostControllerTest : IClassFixture<WebApplicationFactory<Program>>
 
     var response = await client.GetAsync("/Post");
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+    response.StatusCode.Should().Be(HttpStatusCode.OK);
     response.Content.Headers.ContentType.ToString().Should().Be("application/json; charset=utf-8");
   }
 
@@ -75,7 +76,7 @@ public class PostControllerTest : IClassFixture<WebApplicationFactory<Program>>
 
     var response = await client.GetAsync("/Post");
 
-    response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+    response.StatusCode.Should().Be(HttpStatusCode.OK);
     response.Content.Headers.ContentType.ToString().Should().Be("application/json; charset=utf-8");
   }
 }
