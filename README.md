@@ -51,15 +51,26 @@ Requisições para a API seguem os padrões:
 
 ## Instalando depedências 🔽
 
-Faça um clone deste repositório com 
-```git clone``` 
-```cd tryitter.csproj ```
+1. Faça um clone deste repositório com:
+
+```git clone git@github.com:julialanapatto/tryitter.git``` 
+
+2. Siga para o diretório:
+```cd Tryitter.csproj ```
+
+3. Restaure as dependências:
 ```dotnet restore```
-Rode o serviço db com o comando:
+
+4. Rode o serviço db com o comando:
 ```docker-compose up```
+
+5. Atualize o banco de dados:
 ```dotnet ef database update```
+
+6. Rode a aplicação:
 ```dotnet run```
-Após rodar a aplicação, você deverá acessar através de:
+
+7.Após rodar a aplicação, você deverá acessar através de:
 https://localhost:7292/swagger/index.html
 
 
