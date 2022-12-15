@@ -44,7 +44,7 @@ Requisições para a API seguem os padrões:
 | `500` | Erro interno do servidor.|
 
 
-## Tecnologias utilizadas 🛠
+## Linguagem utilizada 🛠
 
 <img title="CSharp" alt="CSharp" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />  
 
@@ -86,37 +86,35 @@ Para visualização do funcionamento da API, disponibilizamos os vídeos de func
 ## Executando a aplicação 🖥
 
 ## Considerações durante o desenvolvimento 📝
-
+Video 1: Método POST Student e obtenção do token para autorização e seu retorno no GET Student.
 
 https://user-images.githubusercontent.com/90054523/207755996-2878a45e-e99b-4145-b807-ac5cf16db397.mp4
-Método POST Student e obtenção do token para autorização e seu retorno no GET Student.
 
 
+Vídeo 2: Método GET, PUT e DELETE Student por Id do estudante e seu retorno no GET Student.
 
 https://user-images.githubusercontent.com/90054523/207756003-c35de942-d9c2-4347-b920-6bbf370fffd8.mp4
-Método GET, PUT e DELETE Student por Id do estudante e seu retorno no GET Student.
 
-
+Vídeo 3: Autorização e método POST Post e seu retorno no GET Post.
 
 https://user-images.githubusercontent.com/90054523/207756013-25e27d17-e47d-421e-888b-c84a342dac4c.mp4
-Autorização e método POST Post e seu retorno no GET Post.
 
-
+Vídeo 4: Método PUT Post.
 
 https://user-images.githubusercontent.com/90054523/207756030-5a14f75a-76b8-4c99-90be-bdcf2bb5d254.mp4
-Método PUT Post.
 
+Vídeo 5: Método DELETE Post.
 
 https://user-images.githubusercontent.com/90054523/207756045-3fbb1932-2db0-4a4b-abf1-08027802605f.mp4
-Método DELETE Post.
 
+Vídeo 6: Método GET Post por Id do Estudante.
 
 https://user-images.githubusercontent.com/90054523/207756063-eba516d7-a725-49fe-a52f-6899d83a1a5e.mp4
-Método GET Post por Id do Estudante.
 
 
 
 ## Considerações Finais
 
 Obrigada por terem nos acompanhado até aqui.
+
 Estamos disponíveis para feedbacks sobre melhorias no projeto e também para parcerias em novos desenvolvimentos.
